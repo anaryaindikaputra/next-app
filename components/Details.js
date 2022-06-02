@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '@/styles/meal.module.css';
 
 export default function Details({ data: meal }) {
@@ -16,7 +17,7 @@ export default function Details({ data: meal }) {
     return (
         <div className={styles.meal}>
             <div className={styles.header}>
-                <img src={meal.strMealThumb} />
+                <Image src={meal.strMealThumb} width="1200" height="1200" />
                 <h1>{meal.strMeal}</h1>
                 <h2 className={styles.headerSubtitle}>
                     {`${meal.strArea} ${meal.strCategory}`}
