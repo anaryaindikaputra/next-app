@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/components/*": ["components/*"],
+            "@/styles/*": ["styles/*"],
+        }
+    },
+    "exlcude": [
+        "node_modules",
+        ".next",
+        "dist",
+    ]
+}

@@ -10,7 +10,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <title>Next.js Training</title>
+                    <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <body>
                     <Main />

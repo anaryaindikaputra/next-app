@@ -4,7 +4,11 @@ const nextConfig = {
   images: {
     domains: [
       'unsplash.com',
+      'www.themealdb.com',
     ]
+  },
+  env: {
+    customKey: 'my-value',
   }
 }
 

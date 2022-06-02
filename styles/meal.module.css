@@ -1,0 +1,37 @@
+.meal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSubtitle {
+    text-align: center;
+}
+
+.headerSubtitle a {
+    text-decoration: none;
+    color: black;
+}
+
+.mealInformations {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.mealIngredients {
+    min-width:  15rem;
+}
+
+.mealIngredients ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: .25rem;
+    background-color: white;
+}
