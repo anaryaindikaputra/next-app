@@ -15,7 +15,7 @@ export default function News({ imageSrc = covid }) {
                 <header>
                     <h1>News</h1>
                     <p className={styles.description}>
-                        Let's read some news!
+                        Lets read some news!
                     </p>
                 </header>
                 <div className={styles.grid}>

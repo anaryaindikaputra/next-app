@@ -17,7 +17,7 @@ export default function Details({ data: meal }) {
     return (
         <div className={styles.meal}>
             <div className={styles.header}>
-                <Image src={meal.strMealThumb} width="1200" height="1200" />
+                <Image src={meal.strMealThumb} width="1200" height="1200" alt={meal.strMeal} />
                 <h1>{meal.strMeal}</h1>
                 <h2 className={styles.headerSubtitle}>
                     {`${meal.strArea} ${meal.strCategory}`}
