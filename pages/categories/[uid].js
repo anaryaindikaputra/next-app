@@ -25,7 +25,7 @@ import { useQuery } from '@apollo/client';
  * @dataDependencies
  */
 // Data Schema Dependencies
-import { GET_PRODUCTS_BY_CATEGORY_UID } from './schema';
+import { GET_PRODUCTS_BY_CATEGORY_UID } from '@/schema/category-schema';
 
 export default function Category() {
     // Initialize query from url

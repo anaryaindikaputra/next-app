@@ -23,7 +23,7 @@ import { useQuery, useLazyQuery } from '@apollo/client';
  * @dataDependencies
  */
 // Data Schema Dependencies
-import { GET_CATEGORIES } from './schema';
+import { GET_CATEGORIES } from '@/schema/category-schema';
 
 export default function Categories() {
     /**

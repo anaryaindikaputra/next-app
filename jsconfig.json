@@ -5,6 +5,7 @@
             "@/components": ["components"],
             "@/components/*": ["components/*"],
             "@/styles/*": ["styles/*"],
+            "@/schema/*": ["schema/*"],
         }
     },
     "exclude": [

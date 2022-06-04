@@ -1,13 +1,28 @@
-// Styling Dependencies
+/**
+ * @stylingDependencies
+ */
+// Material UI Styling Dependencies
 import { useStyles } from './styles';
+// Local Styling Dependencies
 import styles from '@/styles/product/Product.module.css';
 
+/**
+ * @componentDependencies
+ */
 // Material UI Components Dependencies
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 
-// Apollo Client & Schema Dependencies
+/**
+ * @utilityDependencies
+ */
+// Apollo Client Dependencies
 import { useMutation } from '@apollo/client';
+
+/**
+ * @dataDependencies
+ */
+// Schema Dependencies
 import { POST_SUBSCRIBE_BY_EMAIL } from './schema';
 
 export default function SubscriptionForm() {

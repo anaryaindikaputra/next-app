@@ -26,7 +26,7 @@ import { useQuery } from '@apollo/client';
  * @dataDependencies
  */
 // Schema Dependencies
-import { GET_PRODUCT_BY_SKU } from './schema';
+import { GET_PRODUCT_BY_SKU } from '@/schema/product-schema';
 
 export default function Product() {
     // Initialize query from url

@@ -5,7 +5,7 @@
 import styles from '@/styles/product/Product.module.css';
 
 /**
- * @componnetDependencies
+ * @componentDependencies
  */
 // NextJS Components Dependencies
 import Image from 'next/image';

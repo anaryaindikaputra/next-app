@@ -1,5 +1,11 @@
 import { gql } from '@apollo/client';
 
+
+// Schema initialization
+/**
+ * @Schema The products query searches for category that match the criteria specified in the search and
+ * filter attributes.
+ */
 export const GET_CATEGORIES = gql`
     {
         categoryList(filters:{}) {
