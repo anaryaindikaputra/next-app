@@ -5,6 +5,7 @@ const nextConfig = {
     domains: [
       'unsplash.com',
       'www.themealdb.com',
+      'b2cdemo.getswift.asia',
     ]
   },
   env: {
