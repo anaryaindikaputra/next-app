@@ -23,7 +23,7 @@ import { useMutation } from '@apollo/client';
  * @dataDependencies
  */
 // Schema Dependencies
-import { POST_SUBSCRIBE_BY_EMAIL } from './schema';
+import { POST_SUBSCRIBE_BY_EMAIL } from '@/schema/subscribe-schema';
 
 export default function SubscriptionForm() {
     // Initialize Material UI styling
