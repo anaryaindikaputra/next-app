@@ -10,6 +10,8 @@ import categoriesStyles from '@/styles/categories/Categories.module.css';
  */
 // NextJS Components Dependencies
 import Head from 'next/head';
+// Material UI Components Dependencies
+import { Card, CardActionArea, CardContent, Grid, Skeleton, Typography } from '@mui/material';
 // Local Components Dependencies
 import { CategoryCard } from '@/components';
 
@@ -44,7 +46,7 @@ export default function Categories() {
      */
     // const [getCategories, { loading, error, data }] = useLazyQuery(GET_CATEGORIES);
     // Track query status
-    if (loading) return <p>Loading...</p>;
+    // if (loading) return <p>Loading...</p>;
     if (error) return <p>{`Error: ${error.message}`}</p>;
 
     console.log(data && data);
@@ -61,9 +63,71 @@ export default function Categories() {
                 <hr />
                 <section className={categoriesStyles.grid}>
                     {
-                        data && data.categoryList.map((category, index) => (
-                            <CategoryCard category={category} key={index} />
-                        ))
+                        loading ? (
+                            <Grid container spacing={2}>
+                                <Grid item columns={4}>
+                                <Card sx={{ width: '100%' }}>
+                                        <CardActionArea>
+                                            <CardContent>
+                                                <Skeleton
+                                                    variant="text"
+                                                    component={Typography}
+                                                    width={327.792}
+                                                />
+                                                <hr />
+                                                <Skeleton
+                                                    variant="text"
+                                                    component={Typography}
+                                                    width={327.792}
+                                                />
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid>
+                                <Grid item columns={4}>
+                                    <Card sx={{ width: '100%' }}>
+                                        <CardActionArea>
+                                            <CardContent>
+                                                <Skeleton 
+                                                variant="text" 
+                                                component={Typography} 
+                                                width={327.792} 
+                                            />
+                                                <hr />
+                                                <Skeleton 
+                                                variant="text" 
+                                                component={Typography} 
+                                                width={327.792} 
+                                            />
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid>
+                                <Grid item columns={4}>
+                                <Card sx={{ width: '100%' }}>
+                                        <CardActionArea>
+                                            <CardContent>
+                                                <Skeleton 
+                                                variant="text" 
+                                                component={Typography} 
+                                                width={327.792} 
+                                            />
+                                                <hr />
+                                                <Skeleton 
+                                                variant="text" 
+                                                component={Typography} 
+                                                width={327.792} 
+                                            />
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid>
+                            </Grid>
+                        ) : (
+                            data && data.categoryList.map((category, index) => (
+                                <CategoryCard category={category} key={index} />
+                            ))
+                        )
                     }
                 </section>
             </main>

@@ -10,6 +10,8 @@ import categoriesStyles from '@/styles/categories/Categories.module.css'
  */
 // NextJS Components Dependencies
 import Head from 'next/head';
+// Material UI Components Dependencies
+import { Card, CardActionArea, CardContent, CardMedia, Grid, Skeleton, Typography } from '@mui/material';
 // Local Components Dependencies
 import { ProductCard } from '@/components';
 
@@ -42,9 +44,82 @@ export default function Category() {
         variables: {
             categoryUid: query.uid,
         }
-    });
+    })
     // Track query status 
-    if (loading) return 'Loading...';
+    // if (loading) return <p>Loading...</p>;
+    // if (error) return `Error: ${error.message}`;
+
+    if (loading) return (
+        <div className={styles.container}>
+            <Head>
+                <title>{query.name}</title>
+            </Head>
+            <main className={styles.main}>
+                <header>
+                    <h1>{query.name}</h1>
+                </header>
+                <section className={categoriesStyles.grid}>
+                    <Grid container spacing={2}>
+                        <Grid item columns={4}>
+                            <Card sx={{ width: '100%' }}>
+                                <CardActionArea>
+                                    <Skeleton 
+                                    variant="rectangular" 
+                                    component={CardMedia} 
+                                    width={360} 
+                                    height={450}
+                                />
+                                    <CardContent>
+                                        <Skeleton variant="text" component={Typography} />
+                                        <hr />
+                                        <Skeleton variant="text" component={Typography} />
+                                        <Skeleton variant="text" component={Typography} />
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                        <Grid item columns={4}>
+                            <Card sx={{ width: '100%' }}>
+                                <CardActionArea>
+                                    <Skeleton 
+                                    variant="rectangular" 
+                                    component={CardMedia} 
+                                    width={360} 
+                                    height={450}
+                                />
+                                    <CardContent>
+                                        <Skeleton variant="text" component={Typography} />
+                                        <hr />
+                                        <Skeleton variant="text" component={Typography} />
+                                        <Skeleton variant="text" component={Typography} />
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                        <Grid item columns={4}>
+                            <Card sx={{ width: '100%' }}>
+                                <CardActionArea>
+                                    <Skeleton 
+                                    variant="rectangular" 
+                                    component={CardMedia} 
+                                    width={360} 
+                                    height={450}
+                                />
+                                    <CardContent>
+                                        <Skeleton variant="text" component={Typography} />
+                                        <hr />
+                                        <Skeleton variant="text" component={Typography} />
+                                        <Skeleton variant="text" component={Typography} />
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </section>
+            </main>
+        </div>
+    )
+
     if (error) return `Error: ${error.message}`;
 
     const products = data.categoryList[0].products.items;

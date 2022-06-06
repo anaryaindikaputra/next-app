@@ -10,9 +10,9 @@ import styles from '@/styles/product/Product.module.css';
 // NextJS Components Dependencies
 import Head from 'next/head';
 // Material UI Components Dependencies
-import Container from '@mui/material/Container';
+import { Container, Skeleton, Typography } from '@mui/material';
 // Local Components Dependencies
-import { ProductDescription, ProductHeader, ProductImage, SubscriptionForm } from '@/components';
+import { ProductCategories, ProductDescription, ProductHeader, ProductImage, SubscriptionForm } from '@/components';
 
 /**
  * @utilityDependencies
@@ -44,7 +44,46 @@ export default function Product() {
         }
     });
     // Track query status
-    if (loading) return 'Loading...';
+    // if (loading) return 'Loading...';
+    if (loading) return (
+        <div>
+            <main>
+                <Container maxWidth="xl">
+                    <section className={styles.product}>
+                        <Skeleton variant="rectangular" width={240} height={300} />
+                        <div className="product-txt">
+                            <section className="product-header">
+                                <Skeleton variant="text" component={Typography} width={500} height={30} />
+                                <Skeleton variant="rectangular" width={400} height={30} />
+                                <Skeleton variant="text" component={Typography} width={300} height={38} />
+                            </section>
+                            <hr />
+                            <section className="description">
+                                <header>
+                                    <h4>Description</h4>
+                                </header>
+                                <hr />
+                                <Skeleton variant="text" width={960} height={144} />
+                            </section>
+                            <hr />
+                            <section className="subscriptions">
+                                <header>
+                                    <h4>
+                                        Subscribe to Our Newsletter to Get The Latest Product
+                                        Information
+                                    </h4>
+                                </header>
+                                <hr />
+                                <Skeleton variant="rectangular" width={400} height={56} />
+                            </section>
+                            <hr />
+                        </div>
+                    </section>
+                </Container>
+            </main>
+        </div>
+    )
+
     if (error) return `Error: ${error.message}`;
 
     const product = data.products.items[0];

@@ -10,11 +10,7 @@ import styles from '@/styles/product/Product.module.css';
  * @componentDependencies
  */
 // Material UI Components Dependencies
-import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import { Box, Button, Modal, TextField, Typography } from '@mui/material';
 
 /**
  * @utilityDependencies
